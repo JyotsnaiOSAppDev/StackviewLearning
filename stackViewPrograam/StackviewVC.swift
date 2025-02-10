@@ -39,6 +39,9 @@ class StackviewVC: UIViewController {
     }
     func setupdata(){
         let labelRect : CGRect   = CGRect(x: 100.0, y: 50.0, width: self.view.frame.size.width - 130.0, height: 60.0)
+       let iconlbl = UILabel()
+        iconlbl.text = "anchor test"
+        iconlbl.widthAnchor.constraint(equalToConstant: 50).isActive = true
     
         //2. Create the view object
         labelDemo                = UILabel(frame: labelRect)
@@ -74,7 +77,9 @@ class StackviewVC: UIViewController {
         enclosingStack.distribution = UIStackView.Distribution.fill
         enclosingStack.alignment = UIStackView.Alignment.fill
         enclosingStack.spacing = stackSpacing
-        enclosingStack.addArrangedSubview(titleStack)
+        titleStack.addArrangedSubview(nameField!)
+        titleStack.addArrangedSubview(iconlbl)
+
         enclosingStack.addArrangedSubview(nameField!)
         enclosingStack.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(enclosingStack)
