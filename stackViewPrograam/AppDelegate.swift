@@ -9,11 +9,20 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window :UIWindow?
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let mainScreenController : MainVC = MainVC()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        //2. Set the root view controller
+       // self.window?.rootViewController = self.mainScreenController
+         
+        //3. Make the window key and visible
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 
