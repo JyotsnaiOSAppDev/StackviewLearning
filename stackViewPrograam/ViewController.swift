@@ -44,6 +44,9 @@ class ViewController: UIViewController {
       ])
         
     }
+    func feaureCheck() - {
+        print("test feature")
+    }
     func setupLoginScreen1() {
         view.backgroundColor = .white
         let usernameTextField = UITextField()
