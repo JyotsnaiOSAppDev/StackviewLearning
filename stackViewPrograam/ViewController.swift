@@ -44,7 +44,7 @@ class ViewController: UIViewController {
       ])
         
     }
-    func feaureCheck() - {
+    func feaureCheck()  {
         print("test feature")
     }
     func setupLoginScreen1() {
