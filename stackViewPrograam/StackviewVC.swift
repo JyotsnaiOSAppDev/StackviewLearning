@@ -83,6 +83,7 @@ class StackviewVC: UIViewController {
         enclosingStack.addArrangedSubview(nameField!)
         enclosingStack.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(enclosingStack)
+        // test from xcode
         
     }
     
