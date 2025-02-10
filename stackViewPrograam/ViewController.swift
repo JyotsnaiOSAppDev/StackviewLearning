@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20)
         ])
-        
+        //StackView Pprogrammatic UIKit
     }
     func setupLayout() {
         print("Learning stackview layout")
