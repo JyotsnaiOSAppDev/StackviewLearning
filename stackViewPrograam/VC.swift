@@ -15,7 +15,6 @@ class VC: UIViewController {
             m.distribution = .fill
             m.spacing = 10
             m.translatesAutoresizingMaskIntoConstraints = false
-
             m.addArrangedSubview(titleTextField)
             m.addArrangedSubview(contentScrollView)
             m.addArrangedSubview(footerStackView)

@@ -30,17 +30,17 @@ class LoginVC: UIViewController {
     lazy var loginScrollView : UIScrollView = {
         let lg = UIScrollView()
         loginScrollView.addSubview(lg)
-        
         return loginScrollView
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(loginstack)
-        
+       // self.view.addSubview(loginScrollView)
+        self.loginScrollView.addSubview(loginstack)
+        NSLayoutConstraint.activate([loginScrollView.topAnchor.constraint(equalTo: view.topAnchor),loginScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),loginScrollView.leftAnchor.constraint(equalTo: view.leftAnchor),loginScrollView.rightAnchor.constraint(equalTo: view.rightAnchor)])
         loginstack.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([loginstack.topAnchor.constraint(equalTo: view.topAnchor),loginstack.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),loginstack.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),loginstack.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)])
+        loginScrollView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([loginScrollView.topAnchor.constraint(equalTo: view.topAnchor),loginScrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),loginScrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),loginScrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)])
         // Do any additional setup after loading the view.
     }
     func seetupUI(){
@@ -48,14 +48,6 @@ class LoginVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
